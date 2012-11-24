@@ -1,0 +1,15 @@
+Mensaje arrojado por consola indicando que no se puede generar el reporte "Example.jasper"
+
+log4j:WARN No appenders could be found for logger (org.apache.commons.digester.Digester).
+log4j:WARN Please initialize the log4j system properly.
+
+((SOLUCION))
+
+El warning te dice que no estás inicializando log4j.
+ La forma más fácil de inicializarlo es poner como primera línea del main esto
+
+BasicConfigurator.configure();
+
+Con eso el log te saldrá con un formato por defecto.
+ Si no te gusta, tendrás que indicar qué appender quieres y qué formato para el mismo.
+ Para ello, echa un ojo a un manual básico de log4j.
